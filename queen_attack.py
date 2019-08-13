@@ -38,6 +38,9 @@ if __name__ == '__main__':
         obstacles = []
         for x in range(k):
             obstacles.append([int(x) for x in reader.readline().split(' ')])
-        result = queensAttack(n, k, r_q, c_q, obstacles)
-        print(f"The queen is standing at position ({r_q}, {c_q}) on a {n}x{n} chessboard with {k} obstacles")
-        print(f"The number of squares she can attack from that position is {result}.")
+        try:
+            result = queensAttack(n, k, r_q, c_q, obstacles)
+            print(f"The queen is standing at position ({r_q}, {c_q}) on a {n}x{n} chessboard with {k} obstacles")
+            print(f"The number of squares she can attack from that position is {result}.")
+        except ValueError as e:
+            print(e)
