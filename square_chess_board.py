@@ -1,4 +1,9 @@
-class Queen:
+class Queen(object):
+    """Chess queen
+       Attributes:
+           row: The row number of the queen's position
+           column:  the column number of the queen's position
+    """
 
     def __init__(self, row, column):
         self.row = row
@@ -19,7 +24,12 @@ class Queen:
         return right, left, up, down
 
 
-class Obstacle:
+class Obstacle(object):
+    """Chess obstacle
+       Attributes:
+           row: The row number of the obstacle's position
+           column:  the column number of the obstacle's position
+    """
 
     def __init__(self, row, column):
         self.row = row
@@ -36,7 +46,11 @@ class Obstacle:
         return queen.column - self.column, queen.row - self.row
 
 
-class ChessBoardGame:
+class ChessBoardGame(object):
+    """Chess board game
+       Attributes:
+           dimension: The number of rows and columns in the board
+    """
 
     def __init__(self, dimension):
         self.dimension = dimension
